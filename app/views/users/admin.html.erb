@@ -1,0 +1,36 @@
+<% @page_title = "Admin Page" %>
+
+<div>
+  </br>
+  <table cellpadding="0" cellspacing="0" class="dashboardTable">
+    <thead>
+      <tr>
+        <td width="150">First Name</td>
+        <td width="150">Last Name</td>
+        <td width="150">e-mail</td>
+        <td width="100">Kind</td>
+        <td width="150">Registered @</td>
+        <td width="40">&nbsp;</td>
+        <td width="40">&nbsp;</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr class="readedLine1 readedLine2">
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>      
+          <td><%= user.kind %></td>      
+          <td><%= user.created_at.strftime("%d/%m/%Y %H:%M UTC") %></td>
+          <td class="actions">
+            <%= link_to("Edit", {:action => 'edit', :id => user.id}, :class => 'action edit') %>
+          </td>
+          <td class="actions">
+            <%= link_to("Delete", {:action => 'delete', :id => user.id}, :class => 'action delete') %>
+          </td>
+        </tr>
+      <% end %>	
+    </tbody>	
+  </table>
+  </br></br>
+</div>

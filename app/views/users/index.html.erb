@@ -1,0 +1,59 @@
+<div class="topMenu">
+ <div class="topMenuIn">
+   <ul>
+     <li class="smallMenuItem"><!--a class="act" href="index.html">HOME</a-->
+     <%= link_to("HOME", {:action => 'index'}, :class => 'act') %></li>
+
+     <li><a href="elections.html">ELECTIONS</a></li>
+
+     <li><a href="candidates.html">CANDIDATES</a></li>
+     <!--li class="smallMenuItem"><a href="#">NEWS</a></li-->
+   </ul>
+
+   <div class="searchBlock">
+     <input type="text" class="sInp" /> <input type="submit" class="subInp" value=
+     "" />
+   </div>
+ </div>
+</div>
+
+<% flash.each do |name, msg| %>
+
+	</br>
+	<div class="blueErrorBlock" style="margin:0 auto;" >
+		<%= msg %>
+	</div>
+
+<% end %>
+
+<%= render :partial => 'banners' %>
+
+<div class="content">
+ <div class="contentIn">
+   <div class="teaserFirstBlock">
+     <h2 class="darkHeader">This is the 1 paragraph</h2>Lorem ipsum dolor sit amet,
+     consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+     dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+     exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+     consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+     molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+     accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
+     augue duis dolore te feugait <a href="#">nulla facilisi.</a>
+   </div>
+
+   <!--div class="teaserSecondBlock">
+     <br />
+     <br />
+     <br />
+
+     <h2 class="darkHeader">This is the 2 paragraph</h2>Lorem ipsum dolor sit amet,
+     consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+     dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+     exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+     consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+     molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+     accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
+     augue duis dolore te feugait <a href="#">nulla facilisi.</a>
+   </div>
+ </div-->
+</div>

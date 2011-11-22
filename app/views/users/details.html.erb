@@ -1,0 +1,33 @@
+<div class="rightBlock">
+	<h2 class="darkHeader">Please fill your name & email</h2>
+	<div class="loginBlockIn1">
+
+	  <%= form_for(@user, :url => {:action => 'create'}) do |f| %>
+		 <%= f.hidden_field(:kind, :value => "Unknown") %>
+
+		 <%= f.text_field(:first_name, :value => "First Name") %>
+		 <div class="clear"></div>
+		 <%= f.text_field(:last_name, :value => "Last Name") %>
+		 <div class="clear"></div>
+		 <%= f.text_field(:email, :value => "e-mail") %>
+		 <span style="margin: 0;">Note: Email will not be publicly displayed and never shared</span>
+
+		 <div class="clear"></div>
+		 
+		 <span class="spt1">
+		 <%= f.check_box(:accept_terms) %>
+		 <!--input type="checkbox" class="lbiCheck" checked /-->
+		 I agree to the <a href="/users/terms">Terms &amp; Conditions</a> and the <a href="/users/policy">Privacy Policy</a></span>
+
+		 <div class="clear"></div>
+		 </br>				
+
+		 <%= submit_tag("Submit" ) %>
+
+		 <div class="clear"></div>
+
+		 <%= error_messages_for(@user) %>
+
+	  <% end %>
+	</div>
+</div>

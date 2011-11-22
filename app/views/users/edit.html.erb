@@ -1,0 +1,22 @@
+<div class="loginBlockIn1">
+
+	<%= link_to("<< Back to List", {:action => 'admin'}, :class => 'back-link') %>
+
+	<%= form_for(:user, :url => {:action => 'update', :id => @user.id}) do |f| %>
+
+	<%= render(:partial => "new_edit", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag("Update User") %>
+    </div>
+	
+	</br>
+	</br>
+
+	<%= error_messages_for(@user) %>
+
+	<% end %>
+	</br>
+</div>
+
+

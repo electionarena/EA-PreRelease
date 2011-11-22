@@ -1,0 +1,25 @@
+<div class="loginBlockIn1">
+
+  First Name :
+  <div class="clear"></div>
+  <%= f.text_field(:first_name) %>
+  <div class="clear"></div>
+
+  Last Name :
+  <div class="clear"></div>
+  <%= f.text_field(:last_name) %>
+  <div class="clear"></div>
+
+  e-mail :
+  <div class="clear"></div>
+  <%= f.text_field(:email) %>
+  <div class="clear"></div>
+
+  User Kind :
+  <div class="rightBlock">
+    <%= f.select(:kind, ['', 'Candidate', 'Voter', 'Journalist']) %>
+  </div>
+  <div class="clear"></div>
+
+</div>
+

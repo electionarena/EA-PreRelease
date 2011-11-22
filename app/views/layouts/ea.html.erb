@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <%= stylesheet_link_tag('styles', :media => 'all') %>    
+    <%= javascript_include_tag "application" %>
+
+	
+    <!--[if IE 9]><style>.contBlock .buttons2 span {margin: 0 7px 0 0;} #loginFormBlock a.subLogLink {margin: 0 0px 15px 33px; height: 21px; padding: 9px 0 0 0;} #loginFormBlock input {height: 29px; padding: 0 0 0 10px;}</style><![endif]-->
+
+		<style>
+		.black_overlay{
+			display: none;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index:1001;
+			-moz-opacity: 0.8;
+			opacity:.50;
+			filter: alpha(opacity=80);
+		}
+		.white_content {
+			display: none;
+			position: absolute;
+			top: 10%;
+			left: 26%;
+			width: 48%;
+			height: 70%;
+			padding: 16px;
+			border: 10px solid #0352A8;
+			background-color: white;
+			z-index:1002;
+			overflow: auto;
+		}
+	</style>
+
+  </head>
+  <body>
+ 
+    <div class="header">
+      <div class="headerIn">
+        <%= link_to("", {:action => 'index'}, :class => 'homeLogo') %>
+      </div>
+    </div>
+
+    <%= yield %>
+
+    <div class="bottom">
+      <div class="bottomIn">
+        <ul>
+          <li><a href="mailto:contact@electionarena.com">Contact Us</a></li>
+          <li><a href="/users/policy">Privacy Policy</a></li>
+          <li><a href="/users/terms">Terms of Use</a></li>
+          <!--li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li-->
+        </ul>
+        <div class="copyright">&reg; ElectionArena.com</div>
+      </div>
+    </div>
+  </body>
+</html>

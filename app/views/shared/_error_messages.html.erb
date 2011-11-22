@@ -1,0 +1,5 @@
+<% if object && object.errors.size > 0 %>
+	<div class="redErrorBlock">
+		<%= object.errors.full_messages.first %>
+	</div>
+<% end %>

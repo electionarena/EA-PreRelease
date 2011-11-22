@@ -1,0 +1,29 @@
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="user show">
+  <h2>Show User</h2>
+
+  <table summary="User detail view">
+    <tr>
+      <th>First Name</th>
+      <td><%= @user.first_name %></td>
+    </tr>
+    <tr>
+      <th>Last Name</th>
+      <td><%= @user.last_name %></td>
+    </tr>
+    <tr>
+      <th>ID</th>
+      <td><%= @user.id %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @user.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @user.updated_at %></td>
+    </tr>
+  </table>
+  
+</div>
