@@ -21,8 +21,7 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 	
-  
-  
+   
   require "gmail"
   def create
     @user = User.new(params[:user])
@@ -31,6 +30,7 @@ class UsersController < ApplicationController
       #send mail
       gmail = Gmail.connect("GOOGLE-USER-NAME", "PASSWORD")
       gmail.deliver do
+			logger.debug @user.email
         to @user.email
         subject "Having fun in Puerto Rico!"
         text_part do

@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
 
+	scope :candidates, where(:kind => 'Candidate')
+	scope :voters, where(:kind => 'Voter')
+	scope :journalists, where(:kind => 'Journalist')
+
 	EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
 
 	validates :first_name, :presence => true, :length => { :maximum => 25 }
